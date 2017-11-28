@@ -14,7 +14,7 @@ FUNÇÃO PHP para upload = função
  OBSERVAÇÃO
   Para utilização deste, vale lembrar que devemos fazer o download do script do banco de dados e executá-lo.
   
-  vDROP TABLE IF EXISTS tb_usuario;
+DROP TABLE IF EXISTS tb_usuario;
 CREATE TABLE tb_usuario(
   cd_usuario int(11) not null AUTO_INCREMENT,
   nm_usuario varchar(50) not null,
