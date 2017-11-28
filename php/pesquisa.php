@@ -64,7 +64,7 @@
                         <div class="modal-body">
                             <h4><b>imagem:</b><img src="uploads/<?php echo $linha['nm_imagem_produto'];?>" width="100%" height="20%"><br><br>
                          <b>Conteúdo:</b><?php echo $linha['ds_produto'];?><br><br>
-                        <!--<b>Data Evento:</b><?php //echo $linha['dt_insercao'];?><br><br>-->             
+                        <!--<b>Data:</b><?php //echo $linha['dt_insercao'];?><br><br>-->             
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
