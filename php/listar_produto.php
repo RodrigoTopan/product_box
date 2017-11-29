@@ -64,11 +64,16 @@ include("seguranca.php");
                                            <center><h3 class="modal-title" id="myModalLabel"> Produto: <?php echo $linha['cd_produto'];?></h3></center>
                                           </div>
                                           <div class="modal-body">
+<<<<<<< HEAD
                                               <h4><img src="uploads/<?php echo $linha['nm_imagem_produto'];?>" width="100%" height="20%"><br><br>
                                                <b>Nome:</b><?php echo $linha['nm_produto'];?><br><hr>
                                                <b>Descrição:</b><?php echo $linha['ds_produto'];?><br><hr>
                                                <b>Valor:</b><?php echo $linha['vl_produto'];?><br><hr>
                                                <b>Tipo de produto:</b><?php echo $linha['nm_produto'];?><br>
+=======
+                                              <h4><b>imagem:</b><img src="uploads/<?php echo $linha['nm_imagem_produto'];?>" width="100%" height="20%"><br><br>
+                                           <b>Conteúdo:</b><?php echo $linha['ds_produto'];?><br><br>
+>>>>>>> 495a4f70df8fa531e017854239dcf2708465a92d
                                           <!--<b>Data:</b><?php //echo $linha['dt_insercao'];?><br><br>-->             
                                           </div>
                                           <div class="modal-footer">
