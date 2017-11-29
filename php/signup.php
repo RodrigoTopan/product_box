@@ -1,5 +1,5 @@
 <?php
-
+include("seguranca.php");
 include_once("conexao.php");
 
 $nome = $_POST['nome'];

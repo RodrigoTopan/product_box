@@ -1,3 +1,6 @@
+<?
+include("seguranca.php");
+?>
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -24,29 +27,33 @@
               <div class="row">
                 <div class="form-group col-md-4">
                   <label>Nome do Produto:</label>
-                  <input class="form-control form-control-sm col-md-10 col-sm-10" type="text" name="c_nome" required/>
+                  <input class="form-control form-control-sm col-md-10 col-sm-10" type="text" name="c_nome" placeholder="Digite o nome do produto" required/>
                 </div>
                   <div class="form-group col-md-3">
                     <label>Valor:</label>
-                    <input class="form-control form-control-sm col-md-10 col-sm-10" type="text" name="c_valor" required>
+                    <input class="form-control form-control-sm col-md-10 col-sm-10" type="text" name="c_valor" placeholder="Digite o valor do produto" required>
                   </div>      
                   <div class="form-group col-md-2">
                     <label>Tipo do Produto:</label>
-                    <select  name="c_tipo" class="form-control form-control-sm col-md-10 col-sm-10" required>
+                    <select  name="c_tipo" class="form-control form-control-sm col-md-10 col-sm-10" placeholder="Digite o tipo do produto" required>
                       <option value="Livro">Livro</option>
                       <option value="Eletrônico">Eletrônico</option>
                       <option value="Brinquedos">Brinquedos</option>   
                    </select>
                   </div>
                 </div>
-              <div class="form-group col-md-8">
-                            <!--Realizando Upload de Imagem-->
-                        <label class="control-label">Imagem</label>
-                        <input class="form-control" type="file" required name="img">
-              </div> 
-              <div class="form-group">
-                <label>Descrição do Produto:</label>
-                <textarea cols="5" rows="2" class="form-control col-md-8" name="c_desc"></textarea> 
+                <div class="row">
+                  <div class="form-group col-md-8">
+                                <!--Realizando Upload de Imagem-->
+                            <label class="control-label">Imagem</label>
+                            <input class="form-control" type="file" required name="img">
+                  </div> 
+              </div>
+              <div class="row">
+                <div class="form-group col-md-8">
+                  <label>Descrição do Produto:</label>
+                  <textarea cols="4" rows="2" class="form-control col-md-8" name="c_desc" placeholder="Digite alguma descrição sobre o produto"></textarea> 
+                </div>
               </div>
               <input type="submit" class="btn btn-primary" name="btn_enviar" value="Cadastrar">
             </form>

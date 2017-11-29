@@ -7,9 +7,11 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="listar_produto.php">Dashboard<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="listar_produto.php">Produtos</a>
-      <a class="nav-item nav-link" href="cadastro_produto.php">Cadastro</a>
-      <a class="nav-item nav-link" href="index.html">Sair</a>
+      <a class="nav-item nav-link" href="listar_produto.php">Lista de Produtos</a>
+      <a class="nav-item nav-link" href="cadastro_produto.php">Cadastro de Produtos</a>
+       <a class="nav-item nav-link" href="listar_usuario.php">Lista de Usuários</a>
+        <a class="nav-item nav-link" href="inserir_usuario.php">Cadastro de Usuários</a>
+      <a class="nav-item nav-link" href="destruirSessao.php">Sair</a>
     </div>
   </div>
 </nav>

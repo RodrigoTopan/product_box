@@ -21,9 +21,9 @@ include("seguranca.php");
         </div>
         <div class="container">
           <div class="container-principal-produtos">
-           <h4 class="page-header">DASHBOARD DIA/SEMANA</h4>
-             <form class="form-inline" action="pesquisa.php" method="POST">
-                <input type="text" class="form-control form-control-sm col-md-10 col-sm-10" name="c_pesquisa" placeholder="Pesquisar Produto" required="">
+           <h4 class="page-header">Lista de Usuários</h4><br>
+             <form class="form-inline" action="pesquisa_usuario.php" method="POST">
+                <input type="text" class="form-control form-control-sm col-md-10 col-sm-10" name="c_pesquisa" placeholder="Pesquisar usuário por nome" required="">
                  <input class="btn btn-sm" type="submit" name="btn_pesquisa">
              </form>
            <hr>
@@ -42,33 +42,30 @@ include("seguranca.php");
                              //selecionando o banco de dados
                              $bd = mysqli_select_db($conexao, "bd_resolv");
                             //fazendo a seleção da tabela tb_evento
-                            $sql = "SELECT * FROM tb_produto ORDER BY cd_produto DESC";
+                            $sql = "SELECT * FROM tb_usuario ORDER BY cd_usuario DESC";
                             //pegando os dados da tabela. Executando query
                             $resultado = mysqli_query($conexao, $sql);
                             while($linha = mysqli_fetch_array($resultado))
                             {
                                echo '<tr>';                  
-                                   echo  '<td>'.$linha['cd_produto'].'</td>';
-                                   echo  '<td>'.$linha['nm_produto'].'</td>';  
+                                   echo  '<td>'.$linha['cd_usuario'].'</td>';
+                                   echo  '<td>'.$linha['nm_usuario'].'</td>';  
                                    //Ações                                      
-                                   echo  "<td><button type='button' class='btn btn-sm btn-info'  data-toggle='modal' data-target='#myModal$linha[cd_produto]'> Mostrar</button>&nbsp<button type='button' class='btn btn-sm btn-warning'>Editar</button>&nbsp<button type='button' class='btn btn-sm btn-danger' data-toggle='modal' data-target='#apagar$linha[cd_produto]'>Deletar</button>&nbsp</td>"; 
+                                   echo  "<td><button type='button' class='btn btn-sm btn-info'  data-toggle='modal' data-target='#myModal$linha[cd_usuario]'> Mostrar</button>&nbsp<button type='button' class='btn btn-sm btn-warning'>Editar</button>&nbsp<button type='button' class='btn btn-sm btn-danger' data-toggle='modal' data-target='#apagar$linha[cd_usuario]'>Deletar</button>&nbsp</td>"; 
                                                                        
                               echo "</tr>";
                               ?>
                                  <!--Inicio Modal.-->
-                                  <div class="modal fade" id="myModal<?php echo $linha['cd_produto'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal fade" id="myModal<?php echo $linha['cd_usuario'];?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                     <div class="modal-dialog" role="document">
                                       <div class="modal-content">
                                           <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                           <center><h3 class="modal-title" id="myModalLabel"> Produto: <?php echo $linha['cd_produto'];?></h3></center>
+                                           <h3 class="modal-title" id="myModalLabel"> Usuário: <?php echo $linha['cd_usuario'];?></h3>
                                           </div>
                                           <div class="modal-body">
-                                              <h4><img src="uploads/<?php echo $linha['nm_imagem_produto'];?>" width="100%" height="20%"><br><br>
-                                               <b>Nome:</b><?php echo $linha['nm_produto'];?><br><hr>
-                                               <b>Descrição:</b><?php echo $linha['ds_produto'];?><br><hr>
-                                               <b>Valor:</b><?php echo $linha['vl_produto'];?><br><hr>
-                                               <b>Tipo de produto:</b><?php echo $linha['nm_produto'];?><br>
+                                           <b>Nome:</b><?php echo $linha['nm_usuario'];?><br><hr>
+                                           <b>Email:</b><?php echo $linha['nm_email'];?><br><hr>
                                           <!--<b>Data:</b><?php //echo $linha['dt_insercao'];?><br><br>-->             
                                           </div>
                                           <div class="modal-footer">
@@ -78,7 +75,7 @@ include("seguranca.php");
                                     </div>
                                   </div>
                                 <!--fim modal-->    
-                                      <?php
+                               <?php
                                 }
                               mysqli_close($conexao);
                               ?>

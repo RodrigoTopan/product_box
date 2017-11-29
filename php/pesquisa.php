@@ -1,3 +1,6 @@
+<?
+include("seguranca.php");
+?>
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -59,12 +62,12 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                         <center><h3 class="modal-title" id="myModalLabel"> Notícia <?php echo $linha['cd_produto'];?></h3></center>
+                         <center><h3 class="modal-title" id="myModalLabel"> Produto <?php echo $linha['cd_produto'];?></h3></center>
                         </div>
                         <div class="modal-body">
                             <h4><b>imagem:</b><img src="uploads/<?php echo $linha['nm_imagem_produto'];?>" width="100%" height="20%"><br><br>
                          <b>Conteúdo:</b><?php echo $linha['ds_produto'];?><br><br>
-                        <!--<b>Data Evento:</b><?php //echo $linha['dt_insercao'];?><br><br>-->             
+                        <!--<b>Data:</b><?php //echo $linha['dt_insercao'];?><br><br>-->             
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>

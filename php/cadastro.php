@@ -1,4 +1,7 @@
+<!--Criando segurança para não deixar que usuários entrem no sistema sem fazer login-->
 <?php
+include("seguranca.php");
+
 //entrada de formulário
 $nm_produto = $_POST['c_nome'];
 $valor_produto = $_POST['c_valor'];
